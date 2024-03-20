@@ -1,7 +1,7 @@
 PROG := ex00
 
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror
+CXXFLAGS := -Wall -Wextra -Werror -MMD -MP
 CXXFLAGS += -std=c++98
 SRCS =	main.cpp
 OBJS := $(SRCS:.cpp=.o)

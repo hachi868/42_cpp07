@@ -22,5 +22,21 @@ int main()
 	std::cout << "[swap]c: " << c << " / d: " << d << std::endl;
 	std::cout << "[min]" << min( c, d ) << std::endl;
 	std::cout << "[max]" << max( c, d ) << std::endl;
+	std::cout << "*-*-*-*-*-*-*" << std::endl;
+	std::string e = "text1", f = "text2";
+	std::cout << "[[string]]e: " << e << " / f: " << f << std::endl;
+	swap( e, f );
+	std::cout << "[swap]e: " << e << " / f: " << f << std::endl;
+	std::cout << "[min]" << min( e, f ) << std::endl;
+	std::cout << "[max]" << max( e, f ) << std::endl;
+	std::cout << "*-*-*-*-*-*-*" << std::endl;
+	const std::string &g = "text1Const";
+	const std::string &h = "text2Const";
+	std::cout << "[[const string]]g: " << g << " / h: " << h << std::endl;
+	//constはswapできない
+	//swap( g, h );
+	//std::cout << "[swap]g: " << g << " / h: " << h << std::endl;
+	std::cout << "[min]" << min( g, h ) << std::endl;
+	std::cout << "[max]" << max( g, h ) << std::endl;
 	return (0);
 }

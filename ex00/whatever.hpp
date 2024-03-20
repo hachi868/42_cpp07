@@ -1,5 +1,5 @@
-#ifndef CPP07_WHATEVER_HPP
-#define CPP07_WHATEVER_HPP
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
 
 //swap
 template <typename T> void swap(T &a, T &b) {
@@ -11,14 +11,12 @@ template <typename T> void swap(T &a, T &b) {
 
 //min
 template <typename T> T min(T &a, T &b) {
-	if (a < b) return (a);
-	else return (b);
+	return ((a < b) ? a : b);
 }
 
 //max
 template <typename T> T max(T &a, T &b) {
-	if (a < b) return (b);
-	else return (a);
+	return ((a > b) ? a : b);
 }
 
-#endif //CPP07_WHATEVER_HPP
+#endif //WHATEVER_HPP
