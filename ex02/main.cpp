@@ -9,17 +9,19 @@ int main()
 {
 	{
 		std::cout << "[test0] constructor, size()" << std::endl;
-		std::cout << "ar1.size(): " << std::endl;
 		Array<int> ar1;
 		Array<std::string> ar2(6);
 		Array<int> ar1cp(ar1);
 		Array<std::string> ar2cp = ar2;
 		Array<char> *ar3 = new Array<char>;
+		Array<std::string> ar4;
+		ar4 = ar2;
 		std::cout << "ar1.size(): " << ar1.size() << std::endl;
 		std::cout << "ar1cp.size(): " << ar1cp.size() << std::endl;
 		std::cout << "ar2.size(): " << ar2.size() << std::endl;
 		std::cout << "ar2cp.size(): " << ar2cp.size() << std::endl;
 		std::cout << "ar3->size(): " << ar3->size() << std::endl;
+		std::cout << "ar4.size(): " << ar4.size() << std::endl;
 		delete ar3;
 	}
 	std::cout << "*-*-*-*-*-*-*" << std::endl << std::endl;
@@ -110,5 +112,6 @@ int main()
 		}
 	}
 	std::cout << "*-*-*-*-*-*-*" << std::endl << std::endl;
+	//todo: arryのarray
 	return (0);
 }
