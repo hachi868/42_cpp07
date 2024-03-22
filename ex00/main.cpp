@@ -30,12 +30,11 @@ int main()
 	std::cout << "[min]" << min( e, f ) << std::endl;
 	std::cout << "[max]" << max( e, f ) << std::endl;
 	std::cout << "*-*-*-*-*-*-*" << std::endl;
-	const std::string &g = "text1Const";
-	const std::string &h = "text2Const";
-	std::cout << "[[const string]]g: " << g << " / h: " << h << std::endl;
-	//constはswapできない
-	//swap( g, h );
-	//std::cout << "[swap]g: " << g << " / h: " << h << std::endl;
+	std::string g = "text1Const";
+	std::string h = "text2Const";
+	std::cout << "[[string]]g: " << g << " / h: " << h << std::endl;
+	swap( g, h );
+	std::cout << "[swap]g: " << g << " / h: " << h << std::endl;
 	std::cout << "[min]" << min( g, h ) << std::endl;
 	std::cout << "[max]" << max( g, h ) << std::endl;
 	return (0);
