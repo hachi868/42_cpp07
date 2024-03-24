@@ -5,7 +5,7 @@
 
 template <typename T> class Array {
 public:
-	Array() : size_(0), ar_(new T[0]()){};//初期化のため()をつける
+	Array() : size_(0), ar_(new T[0]()){};//初期化のため「new T[0]()」=>()をつける
 	Array(unsigned int n) : size_(n), ar_(new T[n]()) {};
 	Array(const Array &obj) : size_(obj.size()), ar_(obj.copyAr()) {};
 	Array &operator = (const Array &obj) {

@@ -110,6 +110,27 @@ int main()
 		} catch (std::exception& e) {
 			std::cerr << "[Exception caught] " << e.what() << std::endl;
 		}
+		std::cout << "---" << std::endl << std::endl;
+		Array<Array<int> > arAr1(3);
+		Array<int> arInner0(1);
+		Array<int> arInner1(0);
+		Array<int> arInner2(2);
+		try {
+			arInner0[0] = 4;
+			arInner2[0] = 2;
+			arInner2[1] = 1;
+			arAr1[0] = arInner0;
+			arAr1[1] = arInner1;
+			arAr1[2] = arInner2;
+			std::cout << "arAr1[0].size(): " << arAr1[0].size() << std::endl;
+			std::cout << "arAr1[1].size(): " << arAr1[1].size() << std::endl;
+			std::cout << "arAr1[2].size(): " << arAr1[2].size() << std::endl;
+			std::cout << "arAr1[0][0]: " << arAr1[0][0] << " " << (arAr1[0][0] == arInner0[0] ? "\\OK/" : "/NG\\") << std::endl;
+			std::cout << "arAr1[2][0]: " << arAr1[2][0] << " " << (arAr1[2][0] == arInner2[0] ? "\\OK/" : "/NG\\") << std::endl;
+			std::cout << "arAr1[2][1]: " << arAr1[2][1] << " " << (arAr1[2][1] == arInner2[1] ? "\\OK/" : "/NG\\") << std::endl;
+		} catch (std::exception& e) {
+			std::cerr << "[Exception caught] " << e.what() << std::endl;
+		}
 	}
 	std::cout << "*-*-*-*-*-*-*" << std::endl << std::endl;
 	//todo: arryのarray
