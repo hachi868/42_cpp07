@@ -3,19 +3,26 @@
 
 //swap
 template <typename T> void swap(T &a, T &b) {
-	T tmp;
-	tmp = a;
+	T tmp = a;
 	a = b;
 	b = tmp;
 }
 
 //min
-template <typename T> T min(T &a, T &b) {
+//algorithmのmin: https://cpprefjp.github.io/reference/algorithm/min.html
+//等価な要素が 2つ以上あった場合には、最も左の要素を返す。
+//subject: If the two of them are equal, then it returns the second one.
+//=> 本課題では2つめの値を返す
+template <typename T> T &min(T &a, T &b) {
 	return ((a < b) ? a : b);
 }
 
 //max
-template <typename T> T max(T &a, T &b) {
+//algorithmのmax: https://cpprefjp.github.io/reference/algorithm/max.html
+//等価な要素が 2 つ以上あった場合には、最も左の要素を返す。
+//subject: If the two of them are equal, then it returns the second one.
+//=> 本課題では2つめの値を返す
+template <typename T> T &max(T &a, T &b) {
 	return ((a > b) ? a : b);
 }
 
